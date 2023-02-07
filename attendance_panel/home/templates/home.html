@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/add/" method="post">
+        {% csrf_token %}
+    <input type="text" name="name" >
+    <input type="email" name="email" >
+
+    <input type="text" name="studied" >
+    <input type="text" name="address" >
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" name="attendance" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Attendance
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">present</a>
+          <a class="dropdown-item" href="#">absent</a>
+        </div>
+      </div>
+    <button type="submit">Submit</button>
+</form>
+<button><a href="/home/">Show Csv File</a></button>
+<button><a href="/text/">Show Text File</a></button>
+<button><a href="/text_pdf/">Show PDF File</a></button>
+
+
+</body>
+</html>
